@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+:root {
+  --font-primary: "Inter", sans-serif;
+
+  --color-primary: #4731d3;
+  --color-accent: #cbf281;
+  --color-white: #ffffff;
+
+  --text-display: 54px;
+  --text-body-lg: 24px;
+}
+
+html {
+  font-family: var(--font-primary);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 960px;
+  margin-inline: auto;
+}
