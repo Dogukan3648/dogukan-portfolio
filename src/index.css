@@ -5,10 +5,10 @@
 
   --color-primary: #4731d3;
   --color-accent: #cbf281;
-  --color-white: #ffffff;
 
-  --text-display: 54px;
-  --text-body-lg: 24px;
+  --color-background: #ffffff;
+  --color-text: #000000;
+  --color-indigo-dark: #3730a3;
 }
 
 html {
@@ -19,6 +19,9 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+
+  background-color: var(--color-background);
+  color: var(--color-text);
 }
 
 .container {
