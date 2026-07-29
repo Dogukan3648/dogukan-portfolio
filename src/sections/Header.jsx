@@ -9,20 +9,20 @@ const Header = () => {
 
   return (
     <header className="bg-[var(--color-primary)]">
-      <div className="container flex h-[72px] items-center justify-between">
-        <span className="text-[32px] font-bold leading-[72px] text-[var(--color-accent)]">
+      <div className="container flex flex-col gap-3 py-3 sm:flex-row sm:items-center sm:justify-between sm:gap-6 lg:h-[72px] lg:flex-row lg:py-0">
+        <span className="text-center text-2xl font-bold leading-tight text-[var(--color-accent)] sm:text-left lg:text-[32px] lg:leading-[72px]">
           Doğukan Bozkır
         </span>
 
-        <div className="flex items-center gap-8">
+        <div className="flex flex-wrap items-center justify-center gap-4 sm:justify-end lg:gap-8">
           <button
             type="button"
-            className="text-[15px] font-bold tracking-[0.1em] text-[var(--color-background)]"
+            className="text-[13px] font-bold tracking-[0.1em] text-[var(--color-background)] lg:text-[15px]"
           >
             TÜRKÇE'YE GEÇ
           </button>
 
-          <div className="flex h-6 items-center gap-4">
+          <div className="flex items-center gap-3 lg:h-6 lg:gap-4">
             <button
               type="button"
               onClick={handleThemeChange}
@@ -35,7 +35,7 @@ const Header = () => {
               className="h-6 w-12 rounded-full bg-[var(--color-background)]"
             />
 
-            <span className="text-[15px] font-bold tracking-[0.1em] text-[var(--color-background)]">
+            <span className="text-[13px] font-bold tracking-[0.1em] text-[var(--color-background)] lg:text-[15px]">
               DARK MODE
             </span>
           </div>

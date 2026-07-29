@@ -37,31 +37,45 @@ const rightSkills = [
 
 const Skills = () => {
   return (
-    <section className="pt-20">
-      <div className="container flex items-start">
-        <h2 className="w-[170px] shrink-0 text-5xl font-bold leading-none tracking-[0.01em] text-[var(--color-primary)]">
+    <section className="py-14 lg:pt-20 lg:pb-0">
+      <div className="container flex flex-col gap-10 lg:flex-row lg:items-start lg:gap-0">
+        <h2 className="text-center text-4xl font-bold leading-none tracking-[0.01em] text-[var(--color-primary)] lg:w-[170px] lg:shrink-0 lg:text-left lg:text-5xl">
           Skills
         </h2>
 
-        <div className="-mt-4 ml-10 flex gap-20">
-          <div className="flex flex-col gap-[35px]">
+        <div className="grid w-full grid-cols-2 gap-x-6 gap-y-8 lg:-mt-4 lg:ml-10 lg:flex lg:w-auto lg:gap-20">
+          <div className="contents lg:flex lg:flex-col lg:gap-[35px]">
             {leftSkills.map((card) => (
-              <div key={card.name} className="flex items-center gap-6">
-                <img src={card.icon} alt="" className="size-[120px] shrink-0" />
+              <div
+                key={card.name}
+                className="flex flex-col items-center gap-3 text-center sm:flex-row sm:text-left lg:gap-6"
+              >
+                <img
+                  src={card.icon}
+                  alt=""
+                  className="size-16 shrink-0 lg:size-[120px]"
+                />
 
-                <span className="text-2xl font-medium leading-[150%] uppercase text-[#777777]">
+                <span className="text-sm font-medium leading-[150%] uppercase text-[#777777] sm:text-base lg:text-2xl">
                   {card.name}
                 </span>
               </div>
             ))}
           </div>
 
-          <div className="flex flex-col gap-[35px]">
+          <div className="contents lg:flex lg:flex-col lg:gap-[35px]">
             {rightSkills.map((card) => (
-              <div key={card.name} className="flex items-center gap-6">
-                <img src={card.icon} alt="" className="size-[120px] shrink-0" />
+              <div
+                key={card.name}
+                className="flex flex-col items-center gap-3 text-center sm:flex-row sm:text-left lg:gap-6"
+              >
+                <img
+                  src={card.icon}
+                  alt=""
+                  className="size-16 shrink-0 lg:size-[120px]"
+                />
 
-                <span className="text-2xl font-medium leading-[150%] uppercase text-[#777777]">
+                <span className="text-sm font-medium leading-[150%] uppercase text-[#777777] sm:text-base lg:text-2xl">
                   {card.name}
                 </span>
               </div>

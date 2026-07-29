@@ -14,27 +14,27 @@ const Profile = () => {
   return (
     <section className="bg-[var(--color-primary)] py-14">
       <div className="container">
-        <h2 className="text-5xl font-bold leading-none tracking-[0.01em] text-[var(--color-accent)]">
+        <h2 className="text-center text-4xl font-bold leading-none tracking-[0.01em] text-[var(--color-accent)] lg:text-left lg:text-5xl">
           Profile
         </h2>
 
-        <div className="mt-8 flex gap-8">
-          <div className="flex w-[300px] shrink-0 flex-col gap-6">
-            <h3 className="text-[30px] font-medium leading-7 text-white">
+        <div className="mt-10 flex flex-col items-center gap-10 lg:mt-8 lg:flex-row lg:items-start lg:gap-8">
+          <div className="flex w-full max-w-[420px] flex-col gap-6 lg:w-[300px] lg:shrink-0">
+            <h3 className="text-center text-2xl font-medium leading-7 text-white lg:text-left lg:text-[30px]">
               Basic Information
             </h3>
 
-            <dl className="flex flex-col gap-3">
+            <dl className="flex flex-col gap-4 lg:gap-3">
               {profileInfo.map((info) => (
                 <div
                   key={info.label}
-                  className="grid grid-cols-[110px_1fr] gap-x-4"
+                  className="grid grid-cols-[100px_1fr] gap-x-4"
                 >
-                  <dt className="text-base font-semibold leading-6 tracking-[0.01em] text-[var(--color-accent)]">
+                  <dt className="text-sm font-semibold leading-6 tracking-[0.01em] text-[var(--color-accent)] lg:text-base">
                     {info.label}
                   </dt>
 
-                  <dd className="text-base leading-6 tracking-[0.01em] text-white">
+                  <dd className="text-sm leading-6 tracking-[0.01em] text-white lg:text-base">
                     {info.value}
                   </dd>
                 </div>
@@ -42,27 +42,27 @@ const Profile = () => {
             </dl>
           </div>
 
-          <div className="h-[291px] w-[300px] shrink-0 overflow-hidden rounded-[10px]">
+          <div className="h-[291px] w-full max-w-[300px] overflow-hidden rounded-[10px] lg:w-[300px] lg:shrink-0">
             <img
               src={profileImage}
-              alt=""
+              alt="Doğukan Bozkır çalışma ortamı"
               className="h-full w-full scale-[1.55] object-cover"
             />
           </div>
 
-          <div className="flex w-[300px] shrink-0 flex-col ml-4">
-            <h3 className="text-[30px] font-medium leading-7 text-white">
+          <div className="flex w-full max-w-[420px] flex-col lg:ml-4 lg:w-[300px] lg:shrink-0">
+            <h3 className="text-center text-2xl font-medium leading-7 text-white lg:text-left lg:text-[30px]">
               About Me
             </h3>
 
-            <div className="mt-4 flex flex-col gap-6">
-              <p className="text-lg leading-[27px] text-white">
+            <div className="mt-4 flex flex-col gap-5 lg:gap-6">
+              <p className="text-base leading-7 text-white lg:text-lg lg:leading-[27px]">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor
                 provident necessitatibus aliquam inventore aperiam repudiandae,
                 nemo earum iure quod sunt?
               </p>
 
-              <p className="text-lg leading-[27px] text-white">
+              <p className="text-base leading-7 text-white lg:text-lg lg:leading-[27px]">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor
                 provident necessitatibus aliquam inventore aperiam repudiandae,
                 nemo earum iure quod sunt?
