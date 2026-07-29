@@ -1,4 +1,4 @@
-const ProjectCard = ({ project }) => {
+const ProjectCard = ({ project, viewSiteLabel, githubLabel }) => {
   const { title, image, description, technologies, liveUrl, githubUrl } =
     project;
 
@@ -28,14 +28,14 @@ const ProjectCard = ({ project }) => {
           ))}
         </ul>
 
-        <div className="mt-auto flex gap-6">
+        <div className="mt-6 flex gap-6">
           <a
             href={liveUrl}
             target="_blank"
             rel="noreferrer"
             className="text-xs font-medium text-[#120B39] underline"
           >
-            View Site
+            {viewSiteLabel}
           </a>
 
           <a
@@ -44,7 +44,7 @@ const ProjectCard = ({ project }) => {
             rel="noreferrer"
             className="text-xs font-medium text-[#120B39] underline"
           >
-            Github
+            {githubLabel}
           </a>
         </div>
       </div>
