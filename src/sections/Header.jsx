@@ -23,22 +23,65 @@ const Header = () => {
 
           <button
             type="button"
+            role="switch"
+            aria-checked={theme === "dark"}
             onClick={toggleTheme}
             aria-label={
               theme === "light"
                 ? header.themeAriaLabelToDark
                 : header.themeAriaLabelToLight
             }
-            aria-pressed={theme === "dark"}
-            className="cursor-pointer flex items-center gap-3 lg:h-6 lg:gap-4"
+            className="flex cursor-pointer items-center gap-3 lg:h-6 lg:gap-4"
           >
             <span
               aria-hidden="true"
-              className="h-6 w-12 rounded-full bg-[var(--hero-text)]"
-            />
+              className="relative h-6 w-12 shrink-0 rounded-full bg-[var(--theme-switch-track)] transition-colors duration-300"
+            >
+              <span
+                className={`absolute top-0.5 left-0.5 flex h-5 w-5 items-center justify-center text-[var(--theme-switch-icon)] transition-transform duration-300 ${
+                  theme === "dark" ? "translate-x-0" : "translate-x-6"
+                }`}
+              >
+                {theme === "dark" ? (
+                  <svg
+                    viewBox="0 0 24 24"
+                    className="h-5 w-5"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" />
+                  </svg>
+                ) : (
+                  <svg
+                    viewBox="0 0 24 24"
+                    className="h-5 w-5"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <circle cx="12" cy="12" r="4" />
+                    <path d="M12 2v2" />
+                    <path d="M12 20v2" />
+                    <path d="M4.93 4.93l1.42 1.42" />
+                    <path d="M17.66 17.66l1.41 1.41" />
+                    <path d="M2 12h2" />
+                    <path d="M20 12h2" />
+                    <path d="M4.93 19.07l1.42-1.42" />
+                    <path d="M17.66 6.34l1.41-1.41" />
+                  </svg>
+                )}
+              </span>
+            </span>
 
             <span className="text-[13px] font-bold tracking-[0.1em] text-[var(--hero-text)] lg:text-[15px]">
-              {header.themeLabel}
+              {theme === "light"
+                ? header.themeLabelToDark
+                : header.themeLabelToLight}
             </span>
           </button>
         </div>

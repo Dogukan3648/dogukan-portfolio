@@ -10,6 +10,9 @@
   --color-text: #000000;
   --color-indigo-dark: #3730a3;
 
+  --theme-switch-track: #ffffff;
+  --theme-switch-icon: #f59e0b;
+
   --hero-background: var(--color-primary);
   --hero-side-background: var(--color-accent);
   --hero-text: #ffffff;
@@ -46,6 +49,9 @@ html {
 }
 
 html.dark {
+  --theme-switch-track: #3a3a3a;
+  --theme-switch-icon: #ffe66d;
+
   --hero-background: #171043;
   --hero-side-background: #211f0b;
   --hero-text: #ffffff;

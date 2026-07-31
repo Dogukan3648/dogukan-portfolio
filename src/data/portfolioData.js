@@ -48,7 +48,8 @@ export const portfolioData = {
     header: {
       name: "Doğukan Bozkır",
       languageButton: "TÜRKÇE'YE GEÇ",
-      themeLabel: "DARK MODE",
+      themeLabelToDark: "DARK MODE",
+      themeLabelToLight: "LIGHT MODE",
       themeAriaLabelToDark: "Switch to dark theme",
       themeAriaLabelToLight: "Switch to light theme",
     },
@@ -156,7 +157,8 @@ export const portfolioData = {
     header: {
       name: "Doğukan Bozkır",
       languageButton: "SWITCH TO ENGLISH",
-      themeLabel: "KARANLIK MOD",
+      themeLabelToDark: "KARANLIK MOD",
+      themeLabelToLight: "AYDINLIK MOD",
       themeAriaLabelToDark: "Karanlık temayı aç",
       themeAriaLabelToLight: "Aydınlık temayı aç",
     },

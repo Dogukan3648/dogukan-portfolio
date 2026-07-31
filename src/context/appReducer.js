@@ -7,6 +7,9 @@ const VALID_LANGUAGES = ["en", "tr"];
 export const initialState = {
   theme: "light",
   language: "en",
+  portfolioData: null,
+  loading: false,
+  error: null,
 };
 
 const getValidStoredValue = (key, validValues, fallbackValue) => {
@@ -17,6 +20,8 @@ const getValidStoredValue = (key, validValues, fallbackValue) => {
 
 export function getInitialState(defaultState) {
   return {
+    ...defaultState,
+
     theme: getValidStoredValue(
       STORAGE_KEYS.THEME,
       VALID_THEMES,
@@ -43,6 +48,28 @@ export function appReducer(state, action) {
       return {
         ...state,
         language: state.language === "en" ? "tr" : "en",
+      };
+
+    case ACTIONS.FETCH_PORTFOLIO_START:
+      return {
+        ...state,
+        loading: true,
+        error: null,
+      };
+
+    case ACTIONS.FETCH_PORTFOLIO_SUCCESS:
+      return {
+        ...state,
+        portfolioData: action.payload,
+        loading: false,
+        error: null,
+      };
+
+    case ACTIONS.FETCH_PORTFOLIO_ERROR:
+      return {
+        ...state,
+        loading: false,
+        error: action.payload,
       };
 
     default:
