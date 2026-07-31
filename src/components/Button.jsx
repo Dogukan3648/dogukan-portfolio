@@ -11,12 +11,12 @@ const Button = ({ href, icon, children }) => {
         gap-[10px]
         rounded-md
         border
-        border-[var(--color-indigo-dark)]
-        bg-white
+        border-[var(--hero-button-border)]
+        bg-[var(--hero-button-background)]
         py-3
         pl-3
         pr-5
-        text-[var(--color-indigo-dark)]
+        text-[var(--hero-button-text)]
       "
     >
       {icon}

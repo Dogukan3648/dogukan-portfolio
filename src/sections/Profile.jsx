@@ -6,7 +6,7 @@ const Profile = () => {
   const { profile } = content;
 
   return (
-    <section className="bg-[var(--color-primary)] py-14">
+    <section className="bg-[var(--profile-background)] py-14">
       <div className="container">
         <h2 className="text-center text-4xl font-bold leading-none tracking-[0.01em] text-[var(--color-accent)] lg:text-left lg:text-5xl">
           {profile.title}

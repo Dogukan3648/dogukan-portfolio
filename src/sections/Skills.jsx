@@ -10,9 +10,9 @@ const Skills = () => {
   const rightSkills = skills.items.slice(3);
 
   return (
-    <section className="py-14 lg:pt-20 lg:pb-0">
+    <section className="bg-[var(--skills-background)] py-14 lg:pt-20 lg:pb-0">
       <div className="container flex flex-col gap-10 lg:flex-row lg:items-start lg:gap-16">
-        <h2 className="text-center text-4xl font-bold leading-none tracking-[0.01em] text-[var(--color-primary)] lg:w-[220px] lg:shrink-0 lg:text-left lg:text-5xl">
+        <h2 className="text-center text-4xl font-bold leading-none tracking-[0.01em] text-[var(--skills-title)] lg:w-[220px] lg:shrink-0 lg:text-left lg:text-5xl">
           {skills.title}
         </h2>
 
@@ -29,7 +29,7 @@ const Skills = () => {
                   className="size-16 shrink-0 lg:size-[84px]"
                 />
 
-                <span className="text-sm font-medium leading-[150%] uppercase text-[#777777] sm:text-base lg:text-2xl">
+                <span className="text-sm font-medium leading-[150%] uppercase text-[var(--skills-text)] sm:text-base lg:text-2xl">
                   {skill.name}
                 </span>
               </div>
@@ -48,7 +48,7 @@ const Skills = () => {
                   className="size-16 shrink-0 lg:size-[84px]"
                 />
 
-                <span className="text-sm font-medium leading-[150%] uppercase text-[#777777] sm:text-base lg:text-2xl">
+                <span className="text-sm font-medium leading-[150%] uppercase text-[var(--skills-text)] sm:text-base lg:text-2xl">
                   {skill.name}
                 </span>
               </div>

@@ -8,10 +8,10 @@ const Hero = () => {
   const { hero } = content;
 
   return (
-    <section className="relative overflow-hidden bg-[var(--color-primary)] py-12 lg:min-h-[599px] lg:py-0">
+    <section className="relative overflow-hidden bg-[var(--hero-background)] py-12 lg:min-h-[599px] lg:py-0">
       <div
         aria-hidden="true"
-        className="absolute inset-y-0 right-0 hidden w-[30%] bg-[var(--color-accent)] lg:block"
+        className="absolute inset-y-0 right-0 hidden w-[30%] bg-[var(--hero-side-background)] lg:block"
       />
 
       <div className="container relative z-10 flex flex-col items-center gap-10 lg:min-h-[599px] lg:flex-row lg:justify-between">
@@ -20,11 +20,11 @@ const Hero = () => {
             {hero.title}
           </h1>
 
-          <p className="text-center text-lg font-normal leading-[140%] text-[var(--color-background)] lg:text-left lg:text-2xl lg:leading-[100%]">
+          <p className="text-center text-lg font-normal leading-[140%] text-[var(--hero-text)] lg:text-left lg:text-2xl lg:leading-[100%]">
             {hero.description}
           </p>
 
-          <div className="flex flex-wrap justify-center gap-6  lg:justify-start">
+          <div className="flex flex-wrap justify-center gap-6 lg:justify-start">
             <Button
               href={hero.links.github.url}
               icon={<FaGithub className="text-[26px]" />}

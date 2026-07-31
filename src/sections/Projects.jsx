@@ -6,9 +6,9 @@ const Projects = () => {
   const { projects } = content;
 
   return (
-    <section className="bg-[var(--color-accent)] py-14">
+    <section className="bg-[var(--projects-background)] py-14">
       <div className="container">
-        <h2 className="text-5xl font-bold text-[var(--color-primary)]">
+        <h2 className="text-5xl font-bold text-[var(--projects-title)]">
           {projects.title}
         </h2>
 

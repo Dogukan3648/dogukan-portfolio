@@ -6,20 +6,20 @@ const Footer = () => {
   const { footer } = content;
 
   return (
-    <footer className="bg-[#F9F9F9] py-14 lg:pt-16 lg:pb-20">
+    <footer className="bg-[var(--footer-background)] py-14 lg:pt-16 lg:pb-20">
       <div className="container">
         <div className="flex flex-col items-center gap-5 text-center">
-          <h2 className="text-3xl font-bold leading-tight text-[var(--color-primary)] lg:text-5xl lg:leading-[72px]">
+          <h2 className="text-3xl font-bold leading-tight text-[var(--footer-accent)] lg:text-5xl lg:leading-[72px]">
             {footer.title}
           </h2>
 
-          <p className="w-full max-w-[520px] text-lg font-normal leading-[150%] text-[#120B39] lg:text-2xl">
+          <p className="w-full max-w-[520px] text-lg font-normal leading-[150%] text-[var(--footer-text)] lg:text-2xl">
             {footer.description}
           </p>
 
           <a
             href={`mailto:${footer.email}`}
-            className="break-all text-base font-medium tracking-[0.05em] text-[var(--color-primary)] underline lg:text-xl"
+            className="break-all text-base font-medium tracking-[0.05em] text-[var(--footer-accent)] underline lg:text-xl"
           >
             {footer.email}
           </a>
@@ -28,24 +28,24 @@ const Footer = () => {
             <a
               href={footer.socialLinks.x}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               aria-label={footer.ariaLabels.x}
             >
               <FaXTwitter
                 size={28}
-                className="text-[var(--color-primary)] lg:size-[35px]"
+                className="text-[var(--footer-accent)] lg:size-[35px]"
               />
             </a>
 
             <a
               href={footer.socialLinks.codepen}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               aria-label={footer.ariaLabels.codepen}
             >
               <FaCodepen
                 size={28}
-                className="text-[var(--color-primary)] lg:size-[35px]"
+                className="text-[var(--footer-accent)] lg:size-[35px]"
               />
             </a>
 
@@ -55,19 +55,19 @@ const Footer = () => {
             >
               <FaAt
                 size={28}
-                className="text-[var(--color-primary)] lg:size-[35px]"
+                className="text-[var(--footer-accent)] lg:size-[35px]"
               />
             </a>
 
             <a
               href={footer.socialLinks.instagram}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               aria-label={footer.ariaLabels.instagram}
             >
               <FaInstagram
                 size={28}
-                className="text-[var(--color-primary)] lg:size-[35px]"
+                className="text-[var(--footer-accent)] lg:size-[35px]"
               />
             </a>
           </div>

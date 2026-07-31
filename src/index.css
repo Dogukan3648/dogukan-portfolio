@@ -9,10 +9,70 @@
   --color-background: #ffffff;
   --color-text: #000000;
   --color-indigo-dark: #3730a3;
+
+  --hero-background: var(--color-primary);
+  --hero-side-background: var(--color-accent);
+  --hero-text: #ffffff;
+
+  --hero-button-background: #ffffff;
+  --hero-button-border: var(--color-indigo-dark);
+  --hero-button-text: var(--color-indigo-dark);
+
+  --skills-background: #ffffff;
+  --skills-title: var(--color-primary);
+  --skills-text: #777777;
+
+  --profile-background: var(--color-primary);
+
+  --projects-background: var(--color-accent);
+  --projects-title: var(--color-primary);
+
+  --project-card-background: #ffffff;
+  --project-card-title: #4338ca;
+  --project-card-text: #383838;
+
+  --project-badge-background: var(--color-primary);
+  --project-badge-text: #ffffff;
+
+  --project-link: #120b39;
+
+  --footer-background: #f9f9f9;
+  --footer-accent: var(--color-primary);
+  --footer-text: #120b39;
 }
 
 html {
   font-family: var(--font-primary);
+}
+
+html.dark {
+  --hero-background: #171043;
+  --hero-side-background: #211f0b;
+  --hero-text: #ffffff;
+
+  --hero-button-background: #252128;
+  --hero-button-border: #ffffff;
+  --hero-button-text: #ffffff;
+
+  --skills-background: #252128;
+  --skills-title: #cbf281;
+  --skills-text: #ffffff;
+  --profile-background: #171043;
+
+  --projects-background: #1a210b;
+  --projects-title: #cbf281;
+
+  --project-card-background: #2b2727;
+  --project-card-title: #c1baed;
+  --project-card-text: #ffffff;
+
+  --project-badge-background: #8173da;
+  --project-badge-text: #ffffff;
+  --project-link: #cbf281;
+
+  --footer-background: #252128;
+  --footer-accent: #8f88ff;
+  --footer-text: #ffffff;
 }
 
 body {
