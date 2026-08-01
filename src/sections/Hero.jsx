@@ -1,5 +1,5 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import heroImage from "../assets/images/hero-image.png";
+import heroImage from "../assets/images/heroImage.webp";
 import Button from "../components/Button";
 import useApp from "../hooks/useApp";
 

@@ -1,3 +1,4 @@
+import ApiStatus from "./components/ApiStatus";
 import Footer from "./sections/Footer";
 import Header from "./sections/Header";
 import Hero from "./sections/Hero";
@@ -9,6 +10,7 @@ const App = () => {
   return (
     <>
       <Header />
+      <ApiStatus />
       <main>
         <Hero />
         <Skills />

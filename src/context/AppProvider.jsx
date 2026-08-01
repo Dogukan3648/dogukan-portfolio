@@ -13,26 +13,19 @@ const AppProvider = ({ children }) => {
     getInitialState,
   );
 
-  const {
-    theme,
-    language,
-    portfolioData: apiPortfolioData,
-    loading,
-    error,
-  } = state;
+  const { theme, language, success, loading, error } = state;
 
-  const content = apiPortfolioData?.[language] ?? portfolioData[language];
+  const content = portfolioData[language];
 
   useEffect(() => {
-    const fetchPortfolioData = async () => {
+    const sendPortfolioData = async () => {
       dispatch({ type: ACTIONS.FETCH_PORTFOLIO_START });
 
       try {
-        const responseData = await postPortfolioData(portfolioData);
+        await postPortfolioData(portfolioData);
 
         dispatch({
           type: ACTIONS.FETCH_PORTFOLIO_SUCCESS,
-          payload: responseData,
         });
       } catch (requestError) {
         dispatch({
@@ -40,12 +33,12 @@ const AppProvider = ({ children }) => {
           payload:
             requestError.response?.data?.message ||
             requestError.message ||
-            "Portfolio data could not be loaded.",
+            "Portfolio data could not be sent.",
         });
       }
     };
 
-    fetchPortfolioData();
+    void sendPortfolioData();
   }, []);
 
   useEffect(() => {
@@ -70,6 +63,7 @@ const AppProvider = ({ children }) => {
     language,
     content,
     loading,
+    success,
     error,
     toggleTheme,
     toggleLanguage,

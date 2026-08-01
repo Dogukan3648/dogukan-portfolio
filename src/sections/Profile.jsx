@@ -1,4 +1,4 @@
-import profileImage from "../assets/images/profileImage.svg";
+import profileImage from "../assets/images/profileImage.webp";
 import useApp from "../hooks/useApp";
 
 const Profile = () => {

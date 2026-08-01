@@ -7,8 +7,8 @@ const VALID_LANGUAGES = ["en", "tr"];
 export const initialState = {
   theme: "light",
   language: "en",
-  portfolioData: null,
   loading: false,
+  success: false,
   error: null,
 };
 
@@ -54,14 +54,15 @@ export function appReducer(state, action) {
       return {
         ...state,
         loading: true,
+        success: false,
         error: null,
       };
 
     case ACTIONS.FETCH_PORTFOLIO_SUCCESS:
       return {
         ...state,
-        portfolioData: action.payload,
         loading: false,
+        success: true,
         error: null,
       };
 
@@ -69,6 +70,7 @@ export function appReducer(state, action) {
       return {
         ...state,
         loading: false,
+        success: false,
         error: action.payload,
       };
 

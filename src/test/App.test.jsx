@@ -21,6 +21,7 @@ const renderApp = () => {
 
 describe("Portfolio application", () => {
   beforeEach(() => {
+    vi.clearAllMocks();
     localStorage.clear();
     document.documentElement.classList.remove("dark");
 
@@ -75,6 +76,40 @@ describe("Portfolio application", () => {
     expect(themeSwitch).toHaveAttribute("aria-checked", "true");
     expect(document.documentElement).toHaveClass("dark");
     expect(screen.getByText("LIGHT MODE")).toBeInTheDocument();
+  });
+
+  it("localStorage içindeki tema ve dil tercihleriyle başlar", async () => {
+    localStorage.setItem("theme", "dark");
+    localStorage.setItem("language", "tr");
+
+    renderApp();
+
+    expect(
+      await screen.findByText("Ben bir Frontend Developer'ım..."),
+    ).toBeInTheDocument();
+
+    expect(document.documentElement).toHaveClass("dark");
+
+    const themeSwitch = screen.getByRole("switch");
+    expect(themeSwitch).toHaveAttribute("aria-checked", "true");
+  });
+
+  it("tema ve dil değişikliklerini localStorage'a kaydeder", async () => {
+    const user = userEvent.setup();
+
+    renderApp();
+
+    const languageButton = await screen.findByRole("button", {
+      name: "TÜRKÇE'YE GEÇ",
+    });
+
+    const themeSwitch = screen.getByRole("switch");
+
+    await user.click(languageButton);
+    await user.click(themeSwitch);
+
+    expect(localStorage.getItem("language")).toBe("tr");
+    expect(localStorage.getItem("theme")).toBe("dark");
   });
 
   it("portföy verilerini API servisine gönderir", async () => {

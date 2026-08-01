@@ -5,8 +5,8 @@ import reactIcon from "../assets/icons/reactIcon.svg";
 import reduxIcon from "../assets/icons/reduxIcon.svg";
 import vscodeIcon from "../assets/icons/vscodeIcon.svg";
 
-import journeyImage from "../assets/images/journeyImage.svg";
-import workintechImage from "../assets/images/workintechImage.svg";
+import journeyImage from "../assets/images/journeyImage.webp";
+import workintechImage from "../assets/images/workintechImage.webp";
 
 const githubUrl = "https://github.com/Dogukan3648/dogukan-portfolio";
 
@@ -45,6 +45,13 @@ const skills = [
 
 export const portfolioData = {
   en: {
+    common: {
+      status: {
+        loading: "Sending portfolio data...",
+        error: "Portfolio data could not be sent.",
+      },
+    },
+
     header: {
       name: "Doğukan Bozkır",
       languageButton: "TÜRKÇE'YE GEÇ",
@@ -120,7 +127,7 @@ export const portfolioData = {
             "A simple, customizable, minimal setup cookie plugin that allows users to choose which cookies to accept or decline. It was built with modern frontend technologies and designed with a clean, user-friendly interface.",
           technologies: ["React", "Redux", "Vercel"],
           liveUrl: "#",
-          githubUrl: githubUrl,
+          githubUrl,
         },
         {
           id: 2,
@@ -130,10 +137,11 @@ export const portfolioData = {
             "A responsive frontend project focused on creating a clear and accessible user experience. The application was developed using reusable components and modern state management techniques.",
           technologies: ["React", "Redux", "Vercel"],
           liveUrl: "#",
-          githubUrl: githubUrl,
+          githubUrl,
         },
       ],
     },
+
     footer: {
       title: "Send me a message!",
       description:
@@ -154,6 +162,13 @@ export const portfolioData = {
   },
 
   tr: {
+    common: {
+      status: {
+        loading: "Portföy verileri gönderiliyor...",
+        error: "Portföy verileri gönderilemedi.",
+      },
+    },
+
     header: {
       name: "Doğukan Bozkır",
       languageButton: "SWITCH TO ENGLISH",
@@ -230,7 +245,7 @@ export const portfolioData = {
             "Kullanıcıların kabul etmek veya reddetmek istedikleri çerezleri seçebilmesini sağlayan sade ve özelleştirilebilir bir frontend projesidir. Modern frontend teknolojileriyle geliştirilmiş ve kullanıcı dostu bir arayüz oluşturulmuştur.",
           technologies: ["React", "Redux", "Vercel"],
           liveUrl: "#",
-          githubUrl: githubUrl,
+          githubUrl,
         },
         {
           id: 2,
@@ -240,10 +255,11 @@ export const portfolioData = {
             "Anlaşılır ve erişilebilir bir kullanıcı deneyimi oluşturmaya odaklanan responsive bir frontend projesidir. Uygulama, yeniden kullanılabilir componentler ve modern state yönetimi teknikleri kullanılarak geliştirilmiştir.",
           technologies: ["React", "Redux", "Vercel"],
           liveUrl: "#",
-          githubUrl: githubUrl,
+          githubUrl,
         },
       ],
     },
+
     footer: {
       title: "Bana mesaj gönder!",
       description:
