@@ -1,6 +1,6 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import heroImage from "../assets/images/heroImage.webp";
-import Button from "../components/Button";
+import LinkButton from "../components/LinkButton";
 import useApp from "../hooks/useApp";
 
 const Hero = () => {
@@ -25,19 +25,19 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-wrap justify-center gap-6 lg:justify-start">
-            <Button
+            <LinkButton
               href={hero.links.github.url}
               icon={<FaGithub className="text-[26px]" />}
             >
               {hero.links.github.label}
-            </Button>
+            </LinkButton>
 
-            <Button
+            <LinkButton
               href={hero.links.linkedin.url}
               icon={<FaLinkedin className="text-[26px]" />}
             >
               {hero.links.linkedin.label}
-            </Button>
+            </LinkButton>
           </div>
         </div>
 
