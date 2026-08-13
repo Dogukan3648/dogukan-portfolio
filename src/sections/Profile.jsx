@@ -1,4 +1,4 @@
-import profileImage from "../assets/images/profileImage.webp";
+import profileImage from "../assets/images/profileImage.png";
 import useApp from "../hooks/useApp";
 
 const Profile = () => {
@@ -40,7 +40,7 @@ const Profile = () => {
             <img
               src={profileImage}
               alt={profile.imageAlt}
-              className="h-full w-full scale-[1.55] object-cover"
+              className="h-full w-full object-cover object-[50%_35%]"
             />
           </div>
 

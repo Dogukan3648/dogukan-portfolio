@@ -2,25 +2,33 @@
 
 A modern, responsive, and multilingual personal portfolio website built with **React** and **Vite**.
 
-This project was developed to showcase my frontend development skills while focusing on clean architecture, reusable components, scalable state management, responsive design, accessibility, and maintainable code.
+This project was developed to showcase my frontend development skills with a focus on clean architecture, reusable components, predictable state management, responsive design, accessibility, and maintainable code.
 
-The application supports **Light/Dark Theme**, **English & Turkish language switching**, **persistent user preferences**, and demonstrates **API communication** by sending portfolio data to an external service using **Axios**.
+The application supports **Light/Dark Theme**, **English & Turkish language switching**, **persistent user preferences**, and demonstrates **API communication** by submitting portfolio data to an external service using **Axios**.
 
 ---
 
 # 📸 Screenshots
 
-### 💻 Desktop — Light Theme
+## 🌙 Dark Theme
 
-![Desktop Light Theme](./screenshots/desktop-light.png)
+### English
 
-### 🌙 Desktop — Dark Theme
+![Portfolio English Dark Theme](./screenshots/dark-en.png)
 
-![Desktop Dark Theme](./screenshots/desktop-dark.png)
+### Turkish
 
-### 🇹🇷 Desktop — Turkish Dark Theme
+![Portfolio Turkish Dark Theme](./screenshots/dark-tr.png)
 
-![Desktop Turkish Dark Theme](./screenshots/desktop-tr-dark.png)
+## ☀️ Light Theme
+
+### English
+
+![Portfolio English Light Theme](./screenshots/light-en.png)
+
+### Turkish
+
+![Portfolio Turkish Light Theme](./screenshots/light-tr.png)
 
 ---
 
@@ -30,14 +38,16 @@ The application supports **Light/Dark Theme**, **English & Turkish language swit
 - 🌍 English & Turkish Language Support
 - 💾 Persistent Theme & Language Preferences using Local Storage
 - ⚛️ Global State Management with Context API + useReducer
-- 🎨 Pixel-perfect implementation based on the provided Figma design
+- 🎨 Implementation based on the provided Figma design
 - 📱 Fully Responsive Design
 - 🔄 Portfolio Data Submission using Axios
 - ⚡ Fast Development Environment powered by Vite
-- 🧪 Unit Testing with Vitest & React Testing Library
+- 🧪 Automated Testing with Vitest & React Testing Library
 - 📏 ESLint Integration for Code Quality
 - 🖼️ Optimized Images using WebP
 - ♿ Semantic HTML & Accessibility Improvements
+- 🧩 Reusable Component Architecture
+- 🔐 Environment Variable Configuration
 
 ---
 
@@ -80,6 +90,14 @@ src
 ├── hooks
 │   └── useApp.js
 │
+├── sections
+│   ├── Footer.jsx
+│   ├── Header.jsx
+│   ├── Hero.jsx
+│   ├── Profile.jsx
+│   ├── Projects.jsx
+│   └── Skills.jsx
+│
 ├── services
 │   └── portfolioApi.js
 │
@@ -94,54 +112,64 @@ src
 
 # 🏗️ Architecture
 
-The project follows a layered architecture designed to improve maintainability, readability, and scalability.
+The project uses a structured frontend architecture designed to keep application logic organized, predictable, and maintainable.
 
 ### Context API
 
-Provides the global application state.
+Provides shared application state to components without unnecessary prop drilling.
 
 ### useReducer
 
-Handles all application state transitions through centralized reducer logic.
+Manages application state transitions through centralized reducer logic.
 
 ### Actions
 
-Keeps action types centralized and reusable.
+Keeps action types centralized and reusable across the application.
 
 ### Reducer
 
-Contains all state update logic in a predictable and maintainable way.
+Handles state updates in a predictable and maintainable way.
 
 ### Service Layer
 
-Isolates all API communication from UI components.
+Separates API communication from UI components and application state logic.
 
 ### Data Layer
 
-Stores multilingual portfolio content in a centralized structure.
+Stores portfolio content for both supported languages in a centralized structure.
 
 ### Custom Hooks
 
-Simplifies Context consumption across the application.
+Provides a simplified interface for consuming application context across components.
+
+### Section-Based Components
+
+The interface is divided into independent sections such as Hero, Skills, Profile, Projects, and Footer to improve readability and maintainability.
 
 ---
 
-# 🌍 Internationalization
+# 🌍 Multilingual Support
 
 The application currently supports two languages:
 
 - 🇬🇧 English
 - 🇹🇷 Turkish
 
-All translations are managed from a centralized `portfolioData.js` file, making future language additions straightforward.
+Language content is managed through a centralized `portfolioData.js` structure.
+
+The active language is controlled through the application's global state, allowing the interface content to change dynamically without requiring an external internationalization library.
+
+The selected language is also persisted in Local Storage.
 
 ---
 
-# 🌗 Theme Persistence
+# 🌗 Theme Management
 
-The selected theme is automatically saved to **Local Storage**.
+The application supports both **Light** and **Dark** themes.
 
-When users revisit the application, their preferred theme is restored automatically.
+Theme state is managed globally using **Context API + useReducer**.
+
+The selected theme is automatically saved to **Local Storage**, allowing the user's preference to be restored when the application is reopened.
 
 ---
 
@@ -152,20 +180,24 @@ The application persists the following user preferences:
 - Theme
 - Language
 
-State initialization is handled using the lazy initialization feature of **useReducer**.
+State initialization uses the lazy initialization capability of **useReducer**, allowing stored preferences to be restored when the application starts.
 
 ---
 
 # 🌐 API Integration
 
-The application demonstrates communication with an external API by submitting portfolio data using **Axios**.
+The application demonstrates external API communication by submitting portfolio data using **Axios**.
+
+API-related logic is separated from the UI through a dedicated service layer.
 
 Implemented features include:
 
+- Portfolio Data Submission
 - Loading State
 - Error Handling
 - Service Layer Architecture
 - Environment Variable Configuration
+- Graceful fallback when the API request fails
 
 ---
 
@@ -180,29 +212,31 @@ VITE_REQRES_API_KEY=your_api_key
 
 An example configuration is provided in the `.env.example` file.
 
+> The actual API key should never be committed to the repository.
+
 ---
 
 # 🚀 Installation
 
-Clone the repository
+Clone the repository:
 
 ```bash
 git clone https://github.com/Dogukan3648/dogukan-portfolio.git
 ```
 
-Navigate to the project directory
+Navigate to the project directory:
 
 ```bash
 cd dogukan-portfolio
 ```
 
-Install dependencies
+Install dependencies:
 
 ```bash
 npm install
 ```
 
-Start the development server
+Start the development server:
 
 ```bash
 npm run dev
@@ -240,7 +274,7 @@ npm run lint
 
 # ✅ Testing
 
-The project includes automated tests covering:
+The project includes automated tests covering key application behavior:
 
 - Application Rendering
 - Language Switching
@@ -250,9 +284,9 @@ The project includes automated tests covering:
 - API Communication
 - API Failure Fallback
 
-Current Status
+Current test status:
 
-```
+```text
 ✅ 7 / 7 Tests Passing
 ```
 
@@ -260,37 +294,41 @@ Current Status
 
 # ⚡ Performance Optimizations
 
+The project includes several optimizations aimed at improving loading performance and maintainability:
+
 - WebP image optimization
 - Responsive image sizing
 - Lazy reducer initialization
 - Environment variable configuration
 - Service layer abstraction
 - Optimized asset loading
+- Production build optimization with Vite
 
 ---
 
 # ♿ Accessibility
 
-Accessibility improvements include:
+Accessibility considerations include:
 
 - Semantic HTML
 - ARIA Labels
 - Accessible Theme Switch
 - Keyboard-friendly Navigation
+- Descriptive Image Alternative Text
 - Responsive Typography
 
 ---
 
 # 🔮 Future Improvements
 
-Potential future enhancements:
+Potential future enhancements include:
 
 - Contact Form Integration
 - Email Service Integration
 - Project Filtering
 - Blog Section
 - CMS Integration
-- Animations
+- UI Animations
 - Additional Language Support
 
 ---
@@ -299,8 +337,8 @@ Potential future enhancements:
 
 **Doğukan Bozkır**
 
-- GitHub: [Dogukan3648](https://github.com/Dogukan3648)
-- LinkedIn: [Doğukan Bozkır](https://www.linkedin.com/in/dogukanbozkir/)
+- GitHub: https://github.com/Dogukan3648
+- LinkedIn: https://www.linkedin.com/in/dogukanbozkir/
 
 ---
 

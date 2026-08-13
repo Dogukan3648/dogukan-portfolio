@@ -4,11 +4,8 @@ import nodeIcon from "../assets/icons/nodeIcon.svg";
 import reactIcon from "../assets/icons/reactIcon.svg";
 import reduxIcon from "../assets/icons/reduxIcon.svg";
 import vscodeIcon from "../assets/icons/vscodeIcon.svg";
-
-import journeyImage from "../assets/images/journeyImage.webp";
-import workintechImage from "../assets/images/workintechImage.webp";
-
-const githubUrl = "https://github.com/Dogukan3648/dogukan-portfolio";
+import bookVaultImage from "../assets/images/bookVault.webp";
+import technologicalMealsImage from "../assets/images/teknolojikYemekler.webp";
 
 const skills = [
   {
@@ -121,23 +118,23 @@ export const portfolioData = {
       items: [
         {
           id: 1,
-          title: "Workintech",
-          image: workintechImage,
+          title: "Book Vault",
           description:
-            "A simple, customizable, minimal setup cookie plugin that allows users to choose which cookies to accept or decline. It was built with modern frontend technologies and designed with a clean, user-friendly interface.",
-          technologies: ["React", "Redux", "Vercel"],
-          liveUrl: "#",
-          githubUrl,
+            "A personal book discovery and library management application built with React. Users can search thousands of books through the Open Library API, build their own collection, track reading progress, mark favorites, rate books, and save personal notes. The application combines API integration, Context API state management, routing, and persistent local storage to deliver a practical and seamless library experience.",
+          technologies: ["React", "Context API", "Axios"],
+          liveUrl: null,
+          githubUrl: "https://github.com/Dogukan3648/book-library",
+          image: bookVaultImage,
         },
         {
           id: 2,
-          title: "Journey",
-          image: journeyImage,
+          title: "Teknolojik Yemekler",
           description:
-            "A responsive frontend project focused on creating a clear and accessible user experience. The application was developed using reusable components and modern state management techniques.",
-          technologies: ["React", "Redux", "Vercel"],
-          liveUrl: "#",
-          githubUrl,
+            "A responsive pizza ordering application that recreates a real-world e-commerce ordering flow. Users can customize their order by selecting pizza size, dough type, ingredients, and quantity while the application validates their choices and calculates the total price dynamically. The project includes API-based order submission, multi-page navigation, form state management, responsive design, and automated testing.",
+          technologies: ["React", "Axios", "Cypress"],
+          liveUrl: null,
+          githubUrl: "https://github.com/Dogukan3648/fsweb-s8-challenge-pizza",
+          image: technologicalMealsImage,
         },
       ],
     },
@@ -239,23 +236,23 @@ export const portfolioData = {
       items: [
         {
           id: 1,
-          title: "Workintech",
-          image: workintechImage,
+          title: "Book Vault",
           description:
-            "Kullanıcıların kabul etmek veya reddetmek istedikleri çerezleri seçebilmesini sağlayan sade ve özelleştirilebilir bir frontend projesidir. Modern frontend teknolojileriyle geliştirilmiş ve kullanıcı dostu bir arayüz oluşturulmuştur.",
-          technologies: ["React", "Redux", "Vercel"],
-          liveUrl: "#",
-          githubUrl,
+            "React ile geliştirilmiş kişisel kitap keşif ve kütüphane yönetim uygulamasıdır. Kullanıcılar Open Library API üzerinden binlerce kitap arasında arama yapabilir, kendi kütüphanelerini oluşturabilir, okuma durumlarını takip edebilir, favorilerini belirleyebilir, kitapları puanlayabilir ve kişisel notlar ekleyebilir. Uygulama; API entegrasyonu, Context API ile state yönetimi, routing ve localStorage ile kalıcı veri yönetimini bir araya getirir.",
+          technologies: ["React", "Context API", "Axios"],
+          liveUrl: null,
+          githubUrl: "https://github.com/Dogukan3648/book-library",
+          image: bookVaultImage,
         },
         {
           id: 2,
-          title: "Journey",
-          image: journeyImage,
+          title: "Teknolojik Yemekler",
           description:
-            "Anlaşılır ve erişilebilir bir kullanıcı deneyimi oluşturmaya odaklanan responsive bir frontend projesidir. Uygulama, yeniden kullanılabilir componentler ve modern state yönetimi teknikleri kullanılarak geliştirilmiştir.",
-          technologies: ["React", "Redux", "Vercel"],
-          liveUrl: "#",
-          githubUrl,
+            "Gerçek bir e-ticaret sipariş deneyimini simüle eden responsive pizza sipariş uygulamasıdır. Kullanıcılar pizza boyutu, hamur tipi, ek malzemeler ve adet seçenekleriyle siparişlerini özelleştirebilir; uygulama seçimleri doğrular ve toplam fiyatı dinamik olarak hesaplar. Projede form state yönetimi, validasyon, API üzerinden sipariş gönderimi, çok sayfalı yönlendirme, responsive tasarım ve otomatik testler kullanılmıştır.",
+          technologies: ["React", "Axios", "Cypress"],
+          liveUrl: null,
+          githubUrl: "https://github.com/Dogukan3648/fsweb-s8-challenge-pizza",
+          image: technologicalMealsImage,
         },
       ],
     },
